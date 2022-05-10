@@ -7,11 +7,11 @@
 <body>
 
 </body>
-// bai1
 
-<!--<script>-->
-<!--    document.write("Nguyễn Bá Toàn")-->
-<!--</script>-->
+// Bài 1:
+<!-- Các câu lệnh để hiển thị hộp thoại: alert(), prompt(), confirm().-->
+<!-- Cú pháp:-->
+<!-- alert("Nguyễn Bá Toàn")-->
 // bai2
 <!--<script>-->
 <!--    inputa =parseInt(prompt("nhap so:"))-->
@@ -67,9 +67,15 @@
 <input type="text" id="a">
 <input type="text" id="b">
 <br>
-<button onclick="ketqua()">ketqua</button>
+<button onclick="tinh()">ketqua</button>
 <p id="4c"></p>
 <script>
-
+function tinh(){
+    let a = document.getElementById("a").value
+    let b = document.getElementById("b").value
+    let s = b-a+1
+        let S = a * s + (s*(s-1))/2
+    document.getElementById("4c").innerHTML="S= " + S
+}
 </script>
 </html>
