@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+
+</body>
+
+// Bài 1:
+<!-- Các câu lệnh để hiển thị hộp thoại: alert(), prompt(), confirm().-->
+<!-- Cú pháp:-->
+<!-- alert("Nguyễn Bá Toàn")-->
+// bai2
+<!--<script>-->
+<!--    inputa =parseInt(prompt("nhap so:"))-->
+<!--    a = inputa**2-->
+<!--    alert(a)-->
+<!--</script>-->
+//bai 3
+<!--    <input type="text" id="a">-->
+<!--    <input type="text" id="b">-->
+<!--<br>-->
+<!--<button onclick="tinh()">Ketqua</button>-->
+<!--<h1 id="ketqua"></h1>-->
+<!--<script>-->
+<!--  function tinh() {-->
+<!--      let a = document.getElementById("a").value;-->
+<!--      let b = document.getElementById("b").value;-->
+<!--      let S = a*b ;-->
+<!--      document.getElementById("ketqua").innerHTML="S =" +S-->
+<!--  }-->
+<!--</script>-->
+
+// bai4
+//a
+<!--<script>-->
+<!--    inputr= prompt("nhap a")-->
+<!--    let a = parseInt(inputr)-->
+<!--    let P = a*4-->
+<!--    let S = a**2-->
+<!--    document.write("Dientich : " +S );-->
+<!--    document.write("<br/>");-->
+<!--    document.write("Chuvi : " +P );-->
+<!--</script>-->
+//b
+<!--<input type="text" id="a">-->
+<!--<input type="text" id="b">-->
+<!--<br>-->
+<!--<button onclick="ketqua()">ketqua</button>-->
+<!--<p id ="4b"> </p>-->
+<!--<br>-->
+<!--<p id ="4b2"></p>-->
+<!--<script>-->
+<!--    function ketqua(){-->
+<!--        let a = document.getElementById("a").value-->
+<!--        let b = document.getElementById("b").value-->
+<!--        let x = a**2-->
+<!--        let y = Math.pow(a,b)-->
+<!--        document.getElementById("4b").innerHTML="a**2 =" + x-->
+<!--        document.getElementById("4b2").innerHTML="a**b =" + y-->
+<!--    }-->
+
+<!--</script>-->
+//c
+<!--<input type="text" id="a">-->
+<!--<input type="text" id="b">-->
+<!--<br>-->
+<!--<button onclick="tinh()">ketqua</button>-->
+<!--<p id="4c"></p>-->
+<!--<script>-->
+<!--function tinh(){-->
+<!--    let a = document.getElementById("a").value-->
+<!--    let b = document.getElementById("b").value-->
+<!--    let s = b-a+1-->
+<!--        let S = a * s + (s*(s-1))/2-->
+<!--    document.getElementById("4c").innerHTML="S= " + S-->
+<!--}-->
+<!--</script>-->
+//d
+<!--<input type="text" id="a">-->
+<!--<br>-->
+<!--<button onclick="tinh()">ketqua</button>-->
+<!--<p id="4d"></p>-->
+<!--<script>-->
+<!--    function tinh() {-->
+<!--        let a = document.getElementById("a").value-->
+<!--        let b = Math.floor(a / 100)-->
+<!--        let c = Math.floor(a / 100 + 1)-->
+<!--        if (a % 100 == 0) {-->
+<!--            document.getElementById("4d").innerHTML = " theki :" + b-->
+<!--        } else {-->
+<!--            document.getElementById("4d").innerHTML = "theki : " + c-->
+<!--        }-->
+
+<!--    }-->
+// <!--//e-->
+<input type="text" id="a">
+<input type="text" id="b">
+<input type="text" id="c">
+<br>
+<button onclick="tinh()">ketqua</button>
+<p id="4e"></p>
+<script>
+    function tinh() {
+        let a = parseInt(document.getElementById("a").value);
+        let b = parseInt(document.getElementById("b").value);
+        let c = parseInt(document.getElementById("c").value);
+        if (a > 0 && b > 0 && c > 0 && a + b > c && a + c > b && b + c > a) {
+            document.getElementById("4e").innerHTML = "a,b,c :la 1 tam giac"
+            if (a == b && a != c || b == c && a != c || a != b && b == c) {
+                document.getElementById("4e").innerHTML = " a,b,c : la 1 tam giac can"
+            } else {
+                if (a == b && a == c) {
+                    document.getElementById("4e").innerHTML = "a,b,c la tam giac deu"
+                }
+
+                if (a * a + b * b == c * c || a * a + c * c == b * b || b * b + c * c == a * a) {
+                    document.getElementById("4e").innerHTML = "a ,b,c la tam giac vuong"
+
+                }
+            }
+
+        } else {
+            document.getElementById("4e").innerHTML = "a,b,c : khong la 1 tam giac"
+        }
+
+    }
+</script>
+
+</html>

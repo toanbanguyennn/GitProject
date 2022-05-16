@@ -1,0 +1,13 @@
+body {
+    padding: 50px;
+}
+table {
+    padding: 5pt;
+    width: 55%;
+
+    background: #FFFF00;
+}
+td, th {
+    padding: 20px;
+
+}
