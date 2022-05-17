@@ -1,18 +1,19 @@
-
-let b = 0
-for (let i = 0; i< arra;) {
+let sum = 0
+let n = 2
+for (let i = 0; i < 500; ) {
     let check = false
-    for (let j = 2; j < array[i]; j++) {
-        if (array[i] % j === 0) {
+    for (let j = 2; j < n; j++) {
+        if (n % j === 0) {
             check = true
             break
         }
     }
     if (!check) {
-
-        b += parseInt(array[i])
+        if (n <500 ){
+        sum += n
+        }
+        i++
     }
-    i++
+    n++
 }
-document.write(array)
-document.write("tổng sốguyên tố : " + b)
+document.write("tong " + n)
