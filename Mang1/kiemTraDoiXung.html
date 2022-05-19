@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    function kiemTra(s) {
+        let arr = Array.from(s)
+        let n = (arr.length - 1)
+        let count = 0
+        let chuoi1 = arr
+        let chuoi2 = arr
+        for (let i = 0; i < arr.length; i++) {
+            if (chuoi1[i] === chuoi2[n]) {
+                count = count + 1
+                n = n - 1
+            }
+            if (count === arr.length) {
+                result = s + " Là 1 từ đối xứng"
+            } else {
+                result = s + " Không Là 1 từ đối xứng"
+            }
+        }
+        return result
+    }
+
+    let tuNhapVao = prompt("Nhập từ cần kiểm tra")
+    let check = kiemTra(tuNhapVao)
+    alert(check)
+</script>
+
+</html>
