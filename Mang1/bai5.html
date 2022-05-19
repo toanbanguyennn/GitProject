@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button onclick="kiemTraSao()">Bai5</button>
+</body>
+<script>
+    function kiemTraSao(a) {
+        a = [prompt("Nhập vào tên ngôi sao")]
+        let ketqua=[]
+        let sao1 = ["Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe", "Regulus"]
+        let sao2 = ["Ursa Minor", "Tarurus", "Cygnus", "Lyra", "Aquila", "Ursa Major", "Leo"]
+        for (let i = 0; i <= sao1.length; i++) {
+            if (a[0] === sao1[i]) {
+                ketqua = sao2[i]
+            }
+        }
+        if (ketqua==0){
+            alert("khong tim thay ngoi sao")
+        }
+        alert(ketqua)
+    }
+
+</script>
+</html>
