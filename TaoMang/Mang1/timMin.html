@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button onclick="minArray()">run</button>
+</body>
+<script>
+    let n = +prompt("Nhập vào số phần tử của mảng: ")
+    let array = new Array(n)
+    for (let i = 0; i < array.length; i++) {
+        array[i] = prompt("Nhập vào phần tử thứ " + (i + 1))
+    }
+
+  function minArray() {
+  array.sort((a,b)=>a-b)
+  alert(array[0])
+    }
+</script>
+
+</html>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button onclick="binhPhuong()">Bài 1</button>
+<br>
+<button onclick="dienTichVaChuVi()">Bài 2</button>
+<br>
+<button onclick="giaiThua()">Bài 3</button>
+<br>
+<button onclick="kiemTraSo()">Bài 4</button>
+<br>
+<button onclick="soNhoNhat()">Bài 5</button>
+<br>
+<button onclick="kiemTraSoDuong()">Bài 6</button>
+<br>
+<button onclick="doiCho()">Bài 7</button>
+<br>
+<button onclick="daoNguoc()">Bài 8</button>
+<br>
+<button onclick="kiemTra()">Bài 9</button>
+<br>
+</body>
+<script>
+    // Bài 1
+    function binhPhuong(a) {
+        a = +prompt("Nhập số cần tính")
+        let ketQua = a ** 2
+        alert("Bình Phương của " + a + " = " + ketQua)
+    }
+
+    // Bài 2
+    function dienTichVaChuVi(a) {
+        a = +prompt("Nhập bán kính hình tròn")
+        const PI = 3.14
+        let dienTich = (a ** 2) * PI
+        let chuVi = 2 * a * PI
+        alert("Diện tích hình tròn = " + dienTich + "," + "Chu vi hình tròn = " + chuVi)
+    }
+
+    // Bài 3
+    function giaiThua(a) {
+        a = +prompt("Nhập vào một số")
+        let ketQua = 1
+        for (let i = 1; i <= a; i++) {
+            ketQua = ketQua * i
+        }
+        alert("Giai thừa của " + a + " = " + ketQua)
+    }
+
+    // Bài 4
+    function kiemTraSo(a) {
+        a = prompt("Nhập vào kí tự bất kỳ muốn kiểm tra")
+        let check = isNaN(a)
+        if (check) {
+            alert("False")
+        } else {
+            alert("True")
+        }
+    }
+
+    // Bài 5
+    function soNhoNhat(x, y, z) {
+        x = +prompt("Nhập sô thứ 1")
+        y = +prompt("Nhập sô thứ 2")
+        z = +prompt("Nhập sô thứ 3")
+        let min
+        if (x < y && x < z) {
+            min = x
+        } else {
+            if (y < z) {
+                min = y
+            } else {
+                min = z
+            }
+        }
+        alert("Số nhỏ nhất là: " + min)
+    }
+
+    // Bài 6
+    function kiemTraSoDuong(a) {
+        a = +prompt("Nhập một số bất kì")
+        if (a >= 0 && a % 1 === 0) {
+            alert("True")
+        } else {
+            alert("False")
+        }
+    }
+
+    // Bài 7
+    function doiCho(a, b) {
+        a = prompt("Nhập vào số a")
+        b = prompt("Nhập vào số b")
+        let temp1 = a
+        let temp2 = b
+        a = temp2
+        b = temp1
+        alert("Số a sau khi đổi chổ là: " + a)
+        alert("Số b sau khi đổi chổ là: " + b)
+    }
+
+    // Bài 8
+    function daoNguoc(a) {
+       let n = +prompt("mhap vao phan tu cuar mang")
+        let array = new Array(n)
+        for (let i = 0; i < array.length; i++) {
+            array[i] = prompt("Nhập vào phần tử thứ " + (i + 1))
+        }
+        document.write(array.reverse().join())
+    }
+    //Bai 9
+    function kiemTra(){
+        let n = +prompt("mhap vao phan tu cua mang")
+        let array = new Array(n)
+        for (let i = 0; i < array.length; i++) {
+            array[i] = prompt("Nhập vào phần tử thứ " + (i + 1))
+        }
+        let dem = 0
+        let kiTu = prompt("nhap ki tu can tim")
+        for (let i = 0; i < array.length; i++) {
+            if (kiTu === array[i]) {
+                 dem ++
+            }
+        }
+        if (dem > 0 ) {
+            document.write( " so lan xuat hien :" + dem)
+        } else
+            alert(-1)
+    }
+
+</script>
+</html>
