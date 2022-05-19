@@ -21,7 +21,7 @@
 <br>
 <button onclick="daoNguoc()">Bài 8</button>
 <br>
-<button onclick="kiemTraSo()">Bài 9</button>
+<button onclick="kiemTra()">Bài 9</button>
 <br>
 </body>
 <script>
@@ -104,7 +104,33 @@
 
     // Bài 8
     function daoNguoc(a) {
-        let arr
+       let n = +prompt("mhap vao phan tu cuar mang")
+        let array = new Array(n)
+        for (let i = 0; i < array.length; i++) {
+            array[i] = prompt("Nhập vào phần tử thứ " + (i + 1))
+        }
+        document.write(array.reverse().join())
     }
+    //Bai 9
+    function kiemTra(){
+        let n = +prompt("mhap vao phan tu cua mang")
+        let array = new Array(n)
+        for (let i = 0; i < array.length; i++) {
+            array[i] = prompt("Nhập vào phần tử thứ " + (i + 1))
+        }
+        let dem = 0
+        let kiTu = +prompt("nhap ki tu can tim")
+        for (let i = 0; i < array.length; i++) {
+            if (kiTu == array[i]) {
+                 dem ++
+            }
+
+        }
+        if (dem > 0 ) {
+            document.write( " so lan xuat hien :" + dem)
+        } else
+            alert(-1)
+    }
+
 </script>
 </html>
