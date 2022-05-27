@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+
+    function tryRemoveFromArray(arr,index){
+        let arrNew= []
+        for(let i=0;i<arr.length;i++){
+            if(index>=arr.length){
+                arrNew=arr
+                break
+            }
+            if(i!==index){
+                arrNew.push(arr[i])
+            }
+        } return arrNew
+    }
+
+    let a=[1,2,3,4,5]
+    let b=3
+    let ketQua=tryRemoveFromArray(a,b)
+    document.write(ketQua)
+</script>
+</html>

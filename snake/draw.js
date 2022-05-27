@@ -11,9 +11,9 @@ const CURRENT_DIRECTION_DOWN = "down";
 const SNAKE_SIZE = 30;
 const FRUIT_SIZE = 30;
 
-const DEFAULT_SNAKE_X_POSITION = 0;
-const DEFAULT_SNAKE_Y_POSITION = 0;
-const DEFAULT_SNAKE_SPEED = 5;
+const DEFAULT_SNAKE_X_POSITION = 500;
+const DEFAULT_SNAKE_Y_POSITION = 200;
+const DEFAULT_SNAKE_SPEED = 3;
 
 let canvas = document.getElementById('myCanvas');
 let ctx = canvas.getContext('2d');

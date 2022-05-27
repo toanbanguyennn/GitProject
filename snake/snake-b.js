@@ -7,26 +7,30 @@ class Snake {
         this.total = 0;
         this.tail = [];
     }
+
     draw() {
-        // ctx.fillStyle = 'green'
-        // ctx.fillRect(this.tail[0].x,this.tail[0].y,SNAKE_SIZE,SNAKE_SIZE)
-        var grd = ctx.createLinearGradient(0.000, 150.000, 300.000, 150.000);
+        ctx.fillStyle = 'blue'
+        ctx.fillRect(this.tail[0].x,this.tail[0].y,SNAKE_SIZE,SNAKE_SIZE)
+        let grd = ctx.createLinearGradient(0.000, 150.000, 300.000, 150.000);
+
         // Add colors
         grd.addColorStop(0.000, 'rgba(247, 149, 51, 1.000)');
         grd.addColorStop(0.151, 'rgba(243, 112, 85, 1.000)');
-        grd.addColorStop(0.311, 'rgb(229,217,220)');
+        grd.addColorStop(0.311, 'rgba(239, 78, 123, 1.000)');
         grd.addColorStop(0.462, 'rgba(161, 102, 171, 1.000)');
         grd.addColorStop(0.621, 'rgba(80, 115, 184, 1.000)');
         grd.addColorStop(0.748, 'rgba(16, 152, 173, 1.000)');
         grd.addColorStop(0.875, 'rgb(7,82,179)');
-        grd.addColorStop(1.000, 'rgba(240,2,248,0.9)');
+        grd.addColorStop(1.000, 'rgb(184,111,186)');
         ctx.fillStyle = grd;
+
         for (let i=0; i<this.tail.length; i++) {
             ctx.fillRect(this.tail[i].x,
                 this.tail[i].y, SNAKE_SIZE, SNAKE_SIZE);
         }
         ctx.fillRect(this.x,this.y,SNAKE_SIZE,SNAKE_SIZE);
     }
+
     update () {
         for (let i = 0; i < this.tail.length - 1; i ++){
             this.tail[i] = this.tail[i + 1];
@@ -64,7 +68,8 @@ class Snake {
             return  'left';
         }
     }
-    changeDirection (keyDirection){
+
+    changeDirection(keyDirection){
         if (keyDirection === ORIENTATION_UP && snake.direction() !== CURRENT_DIRECTION_DOWN){
             this.xSpeed = 0;
             this.ySpeed = -DEFAULT_SNAKE_SPEED;
@@ -82,7 +87,8 @@ class Snake {
             this.ySpeed = 0;
         }
     }
-    eat (fruit){
+
+    eat(fruit){
         if((this.x + SNAKE_SIZE > fruit.x && this.x  <= fruit.x + FRUIT_SIZE)
             && (this.y + SNAKE_SIZE >= fruit.y && this.y <= fruit.y + FRUIT_SIZE )){
             this.total += 1;
